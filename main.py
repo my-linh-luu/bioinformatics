@@ -22,3 +22,9 @@ print("5' " + colored(reverse_complement(DNAStr)) + " 3' (reverse_complement)")
 print(f"\n[5] + GC Content : {gc_content(DNAStr)}%")
 print(
       f"\n[6] + GC Content Subsequence for k=10: {gc_content_subsec(DNAStr, 10)}")
+
+print(
+      f"\n[7] + Aminoacids Sequence from DNA: {translate_seq(DNAStr)}")
+
+print(
+      f"\n[8] + Codon frequency (L): {codon_usage(DNAStr, 'L')}")
