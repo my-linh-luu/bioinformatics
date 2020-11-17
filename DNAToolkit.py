@@ -1,4 +1,4 @@
-import collections
+from collections import Counter
 from Structures import *
 
 # DNA Toolkit file
@@ -44,5 +44,16 @@ def gc_content_subsec(seq, k=20):
  
     
 def translate_seq(seq, init_pos=0):
-    return (DNA_Codons[seq[pos:pos + 3]] for pos in range[init_pos, len(seq) - 2, 3 ])     
+    return [DNA_Codons[seq[pos:pos + 3]] for pos in range(init_pos, len(seq) - 2, 3 )]    
       
+def codon_usage(seq, aminoacid):
+    tmpList = []
+    for i in range(0, len(seq) - 2, 3):
+        if DNA_Codons[seq[i:i + 3]] == aminoacid:
+            tmpList.append(seq[i:i+3])
+            
+    freDict = dict(Counter(tmpList))
+    totalWight = sum(freDict.values())
+    for seq in freDict:
+        freDict[seq] = round(freDict[seq] / totalWight, 2)
+    return freDict
