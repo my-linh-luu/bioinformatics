@@ -1,4 +1,4 @@
-##DNA ToolKit
+#DNA ToolKit
 
 This project is a toolkit that allows you to generate randomized sequences of DNA of various lenght and analyze the content of the sequence.
 
@@ -8,7 +8,7 @@ Here is a caption of what it might looks like on the terminal:
 ![screenshot](screenshots/example.png)
 
 
-###Content of the project
+#Content of the project
 ----
 - _DNAToolKit.py_: contains all the important methods of the project
 - _Structures.py_: a library of all the existing nucleotids of DNA and RNA as well as the corresponding codons.
