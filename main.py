@@ -28,3 +28,7 @@ print(
 
 print(
       f"\n[8] + Codon frequency (L): {codon_usage(DNAStr, 'L')}")
+
+print("\n[9] + Reading Frame : \n")
+for frame in gen_reading_frames(DNAStr):
+      print(frame)

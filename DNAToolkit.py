@@ -57,3 +57,14 @@ def codon_usage(seq, aminoacid):
     for seq in freDict:
         freDict[seq] = round(freDict[seq] / totalWight, 2)
     return freDict
+
+def gen_reading_frames(seq):
+    frames = []
+    # 3 reading frames
+    frames.append(translate_seq(seq, 0))
+    frames.append(translate_seq(seq,1))
+    frames.append(translate_seq(seq,2))
+    frames.append(translate_seq(reverse_complement(seq), 0))
+    frames.append(translate_seq(reverse_complement(seq), 1))
+    frames.append(translate_seq(reverse_complement(seq), 2))
+    return frames
